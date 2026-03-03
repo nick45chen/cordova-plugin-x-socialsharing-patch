@@ -50,26 +50,6 @@ cordova plugin add https://github.com/nick45chen/cordova-plugin-x-socialsharing-
 cordova prepare
 ```
 
-如需 npm 安裝路徑，也可測：
-
-```bash
-cordova plugin add cordova-plugin-x-socialsharing-patch
-cordova prepare
-```
-
-## 6) （可選）發布到 npm
-
-如果本次要同步發布 npm：
-
-```bash
-npm publish
-```
-
-發布後確認：
-
-- [ ] `npm view cordova-plugin-x-socialsharing-patch version` 顯示新版本。
-- [ ] README 安裝指令可用。
-
 ---
 
 ## 快速版（最小步驟）

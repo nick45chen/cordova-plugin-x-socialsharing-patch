@@ -29,12 +29,6 @@ jobs:
           cordova prepare
           ```
 
-          Or install from npm:
-
-          ```bash
-          cordova plugin add cordova-plugin-x-socialsharing-patch
-          cordova prepare
-          ```
           EOF
 
           gh release create "${{ github.ref_name }}" \
