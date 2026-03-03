@@ -41,6 +41,7 @@ Every now and then kind folks ask me how they can give me all their money. So if
 8. [Whitelisting on iOS](#8-whitelisting-on-ios)
 9. [NSPhotoLibraryUsageDescription on iOS](#9-nsphotolibraryusagedescription-on-ios)
 10. [Import Types into an Ionic Angular Project](#10-import-types-into-an-ionic-angular-project)
+11. [Release Checklist](#11-release-checklist)
 
 ## 1. Description
 
@@ -93,6 +94,12 @@ $ phonegap local plugin add https://github.com/nick45chen/cordova-plugin-x-socia
 or with Cordova CLI, from npm:
 ```
 $ cordova plugin add cordova-plugin-x-socialsharing-patch
+$ cordova prepare
+```
+
+Or pin to a GitHub release tag (recommended for deterministic builds):
+```
+$ cordova plugin add https://github.com/nick45chen/cordova-plugin-x-socialsharing-patch.git#v6.0.5-patch.1
 $ cordova prepare
 ```
 
@@ -575,3 +582,7 @@ Add this reference into your typings file definition:
 ```
 /// <reference path="../node_modules/cordova-plugin-x-socialsharing-patch/types/index.d.ts" />
 ```
+
+## 11. Release Checklist
+
+For maintainers, release steps are documented in [`docs/release-checklist.md`](docs/release-checklist.md).
