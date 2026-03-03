@@ -1,0 +1,37 @@
+name: Release plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          body: |
+            ## Cordova install
+
+            Install this plugin directly from this release tag:
+
+            ```bash
+            cordova plugin add https://github.com/${{ github.repository }}.git#${{ github.ref_name }}
+            cordova prepare
+            ```
+
+            Or install from npm:
+
+            ```bash
+            cordova plugin add cordova-plugin-x-socialsharing-patch
+            cordova prepare
+            ```
