@@ -17,10 +17,10 @@
 [![TotalDownloads][total-downloads-image]][npm-url]
 [![Twitter Follow][twitter-image]][twitter-url]
 
-[npm-image]:http://img.shields.io/npm/v/cordova-plugin-x-socialsharing-patch.svg
-[npm-url]:https://npmjs.org/package/cordova-plugin-x-socialsharing-patch
-[downloads-image]:http://img.shields.io/npm/dm/cordova-plugin-x-socialsharing-patch.svg
-[total-downloads-image]:http://img.shields.io/npm/dt/cordova-plugin-x-socialsharing-patch.svg?label=total%20downloads
+[npm-image]:http://img.shields.io/npm/v/cordova-plugin-x-socialsharing.svg
+[npm-url]:https://npmjs.org/package/cordova-plugin-x-socialsharing
+[downloads-image]:http://img.shields.io/npm/dm/cordova-plugin-x-socialsharing.svg
+[total-downloads-image]:http://img.shields.io/npm/dt/cordova-plugin-x-socialsharing.svg?label=total%20downloads
 [twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me
 [twitter-url]:https://twitter.com/eddyverbruggen
 
@@ -88,12 +88,12 @@ Windows Phone 8
 SocialSharing is compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman), compatible with [PhoneGap 3.0 CLI](http://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface_add_features), here's how it works with the CLI:
 
 ```
-$ phonegap local plugin add https://github.com/nick45chen/cordova-plugin-x-socialsharing-patch.git
+$ phonegap local plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git
 ```
 
 or with Cordova CLI, from npm:
 ```
-$ cordova plugin add cordova-plugin-x-socialsharing-patch
+$ cordova plugin add cordova-plugin-x-socialsharing
 $ cordova prepare
 ```
 
@@ -150,7 +150,7 @@ Window Phone: Copy `SocialSharing.cs` to `platforms/wp8/Plugins/nl.x-services.pl
 ### PhoneGap Build
 Just add the following xml to your `config.xml` to always use the latest version of this plugin (which is published to plugins.cordova.io these days):
 ```xml
-<gap:plugin name="cordova-plugin-x-socialsharing-patch" source="npm" />
+<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 ```
 or to use an older version, hosted at phonegap build:
 ```xml
@@ -571,7 +571,7 @@ This plugin requires permissions to the users photos. Since iOS 10 it is require
 The plugin configures a default description for you. If you do need to customise it, you can set a Cordova variable when installing:
 
 ```
-$ cordova plugin add cordova-plugin-x-socialsharing-patch --variable PHOTO_LIBRARY_USAGE_DESCRIPTION="This app uses your photo library" --variable PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION="This app saves images your photo library"
+$ cordova plugin add cordova-plugin-x-socialsharing --variable PHOTO_LIBRARY_USAGE_DESCRIPTION="This app uses your photo library" --variable PHOTO_LIBRARY_ADD_USAGE_DESCRIPTION="This app saves images your photo library"
 ```
 
 ## 10. Import Types into an Ionic Angular Project
@@ -580,7 +580,7 @@ If you do not already have a typings file definition, create one inside your `sr
 
 Add this reference into your typings file definition:
 ```
-/// <reference path="../node_modules/cordova-plugin-x-socialsharing-patch/types/index.d.ts" />
+/// <reference path="../node_modules/cordova-plugin-x-socialsharing/types/index.d.ts" />
 ```
 
 ## 11. Release Checklist
