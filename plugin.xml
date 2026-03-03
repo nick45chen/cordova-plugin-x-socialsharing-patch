@@ -17,9 +17,9 @@
 
   <keywords>Social, Share, Twitter, Facebook, Email, SMS, WhatsApp, Tumblr, Pocket, LinkedIn</keywords>
 
-  <repo>https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git</repo>
+  <repo>https://github.com/nick45chen/cordova-plugin-x-socialsharing-patch.git</repo>
 
-  <issue>https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/issues</issue>
+  <issue>https://github.com/nick45chen/cordova-plugin-x-socialsharing-patch/issues</issue>
 
   <engines>
     <engine name="cordova" version=">=3.0.0"/>
