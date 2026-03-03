@@ -373,6 +373,7 @@ public class SocialSharing extends CordovaPlugin {
             cordova.getActivity().runOnUiThread(new Runnable() {
               public void run() {
                 Intent chooseIntent;
+                ShareChooserPendingIntent.chosenComponent = null;
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP_MR1) {
                   // Intent.createChooser's third param was only added in SDK version 22.
                   chooseIntent = Intent.createChooser(sendIntent, chooserTitle, pendingIntent.getIntentSender());
@@ -710,8 +711,10 @@ public class SocialSharing extends CordovaPlugin {
         case ACTIVITY_CODE_SEND__OBJECT:
           JSONObject json = new JSONObject();
           try {
+            final String chosenComponent = ShareChooserPendingIntent.chosenComponent;
+            ShareChooserPendingIntent.chosenComponent = null;
             json.put("completed", resultCode == Activity.RESULT_OK);
-            json.put("app", (ShareChooserPendingIntent.chosenComponent != null ? ShareChooserPendingIntent.chosenComponent : "")); // we need a completely different approach if we want to support this on Android. Idea: https://clickclickclack.wordpress.com/2012/01/03/intercepting-androids-action_send-intents/
+            json.put("app", (chosenComponent != null ? chosenComponent : "")); // we need a completely different approach if we want to support this on Android. Idea: https://clickclickclack.wordpress.com/2012/01/03/intercepting-androids-action_send-intents/
             _callbackContext.sendPluginResult(new PluginResult(
                 PluginResult.Status.OK,
                 json));

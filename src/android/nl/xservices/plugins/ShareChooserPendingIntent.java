@@ -11,6 +11,8 @@ public class ShareChooserPendingIntent extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        ShareChooserPendingIntent.chosenComponent = null;
+
         if (intent == null) {
             return;
         }
