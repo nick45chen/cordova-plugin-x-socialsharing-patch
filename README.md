@@ -1,3 +1,15 @@
+> ⚠️ **Fork Patch Notice (CVE-2025-65835)**
+>
+> This repository is a security patch fork of `cordova-plugin-x-socialsharing`, maintained as `cordova-plugin-x-socialsharing-patch`.
+>
+> Fork adjustments in this patch line:
+> - Plugin/package id renamed to `cordova-plugin-x-socialsharing-patch`.
+> - Version line for patched release: `6.0.5-patch.1`.
+> - Android `ShareChooserPendingIntent` receiver hardened for CVE-2025-65835:
+>   - `android:exported` is set to `false`.
+>   - Receiver `<intent-filter>` for `ACTION_SEND` is removed.
+>   - Runtime null/type checks were added to avoid NPE and unsafe payload handling.
+
 # PhoneGap / Cordova Social Sharing plugin
 
 [![NPM version][npm-image]][npm-url]
